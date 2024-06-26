@@ -34,10 +34,10 @@ if __name__ == '__main__':
     print('_______________ One Hot View Without get_dummies(): ________________ ')
 
     df.loc[df[COLUMN_NAME] == HUMAN_WORD, [HUMAN_WORD]] = (df[COLUMN_NAME] == HUMAN_WORD)
-    df.loc[df[COLUMN_NAME] == ROBOT_WORD, [HUMAN_WORD]] = (df[COLUMN_NAME] == HUMAN_WORD)
+    df.loc[df[COLUMN_NAME] == ROBOT_WORD, [HUMAN_WORD]] = False
 
     df.loc[df[COLUMN_NAME] == ROBOT_WORD, [ROBOT_WORD]] = (df[COLUMN_NAME] == ROBOT_WORD)
-    df.loc[df[COLUMN_NAME] == HUMAN_WORD, [ROBOT_WORD]] = (df[COLUMN_NAME] == ROBOT_WORD)
+    df.loc[df[COLUMN_NAME] == HUMAN_WORD, [ROBOT_WORD]] = False
 
     print(df[[HUMAN_WORD, ROBOT_WORD]])
     sep_data()
